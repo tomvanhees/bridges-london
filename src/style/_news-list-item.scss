@@ -1,0 +1,172 @@
+.news-list-container {
+  width: 100%;
+  display: none;
+  background-color: $background-color;
+  overflow-y: auto;
+  height: 100vh;
+
+  &.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+
+  header {
+    height: 99px;
+    padding: 10px;
+
+    .back-button {
+      display: inline-block;
+      font-size: 18px;
+      font-family: $flanders_art_sansmedium;
+      margin-bottom: 10px;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .text {
+        display: inline-block;
+        line-height: 28.5px;
+        vertical-align: bottom;
+      }
+    }
+
+    .title {
+      color: $title-font-color;
+      font-size: 34px;
+      font-family: $flanders_art_sansbold;
+    }
+  }
+
+  .news-list {
+    .list-item {
+      display: flex;
+      margin-bottom: 10px;
+      overflow: hidden;
+      height: 148px;
+      width: 100%;
+
+      .icon {
+        display: none;
+      }
+
+
+      .list-item-sidebar {
+        width: 4px;
+        background-color: #FFFFFF;
+        height: 148px;
+        border-radius: 2px;
+        margin-right: 16px;
+
+        &.active {
+          background-color: $light-blue;
+        }
+      }
+
+      .list-item-container {
+        padding: 10px;
+        display: flex;
+        border-bottom: 1px solid white;
+
+        img {
+          margin-right: 15px;
+          width: 87px;
+          height: 117px;
+          object-fit: cover;
+        }
+
+        h1 {
+          font-size: 20px;
+          color: $title-font-color;
+          font-family: $flanders_art_sansmedium;
+          margin-bottom: 5px;
+        }
+
+        h2 {
+          font-size: 14px;
+          color: $subtitle-font-color;
+          font-family: $flanders_art_sanslight;
+          margin-bottom: 5px;
+        }
+
+        .description {
+          font-size: 14px;
+          font-family: $flanders_art_sanslight;
+          text-align: justify;
+        }
+      }
+
+
+    }
+  }
+}
+
+@include media('lg') {
+  .news-list-container {
+    width: 424px;
+    padding-top: 24px;
+    display: block;
+
+    header {
+      display: none;
+    }
+
+    .news-list {
+
+      .list-item {
+        width: 424px;
+        position: relative;
+
+        .icon {
+          display: block;
+          position: absolute;
+          right: 3px;
+          top: calc(50% - 9px);
+          width: 14px;
+          height: 16px;
+
+         > img {
+            width: 10px;
+            height: 12px;
+          }
+        }
+
+        .list-item-sidebar {
+          margin-right: 25px;
+          opacity: 0;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+
+        .list-item-container {
+          width: 100%;
+
+        >img {
+            width: 103px;
+          }
+          .description{
+            margin-right: 19px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

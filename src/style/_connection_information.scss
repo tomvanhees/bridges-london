@@ -1,0 +1,174 @@
+.mobile-connection-information {
+  position: absolute;
+  bottom: 0;
+  background-color: $background-color;
+  border-radius: 20px 20px 0 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  width: calc(100vw - 30px);
+  z-index: 5;
+
+  header {
+    padding-top: 15px;
+
+    .white-bar {
+      position: absolute;
+      top: 0;
+      height: 2px;
+      width: 110px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.lg-connection-information {
+  width: 100%;
+  background-color: $background-color;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+}
+
+
+.mobile-connection-information header, .lg-connection-information header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .name {
+    font-family: $flanders_art_sansmedium;
+    color: $title-font-color;
+    font-size: 20px;
+
+  }
+
+  .icons-container {
+    display: flex;
+
+
+    .icon {
+      width: 19px;
+      height: 19px;
+      margin-left: 8px;
+      img{
+       width:  19px;
+       height:  19px;
+      }
+    }
+
+    .dropdown{
+      margin-left: 15px;
+    }
+  }
+}
+
+
+.connection-accessibility {
+  padding-bottom: 60px;
+
+  .title {
+    margin: 15px 0;
+  }
+
+  .accessibility-item-container {
+    display: flex;
+
+    .accessibility-item {
+      margin-right: 10px;
+      display: flex;
+    }
+  }
+}
+
+.connection-information, .connection-warning {
+  position: relative;
+  margin: 15px 0;
+
+  .icon {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    img{
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  .title{
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  .description {
+    margin-left: 30px;
+  }
+}
+
+.services-container {
+  margin: 15px 0;
+
+  .service-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding: 3px;
+    .service-name-container{
+      margin-top:8px;
+      img{
+        vertical-align: middle;
+      }
+      .service-name {
+        font-size: 20px;
+        font-family: $flanders_art_sanslight;
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+
+
+    .icon-container {
+      display: flex;
+      border: 1px solid white;
+      border-radius: 25px;
+      padding: 4px 8px;
+      width: 120px;
+      justify-content: space-between;
+
+      .icon {
+      }
+
+      .text {
+        color: $sub-subtitle-font-color;
+        font-size: 14px;
+        line-height: 27px;
+        vertical-align: bottom;
+      }
+
+      .circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #DA6B2F;
+        display: inline-block;
+
+        &.active {
+          background-color: #7CEC81;
+        }
+      }
+    }
+  }
+}
+
+@include media('lg') {
+  .mobile-connection-information {
+    display: none;
+  }
+
+  .connection-accessibility {
+    padding-bottom: 0;
+  }
+}

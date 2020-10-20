@@ -1,0 +1,10 @@
+#map {
+  height: calc(100vh - 99px);
+  width: 100%;
+}
+
+@include media('lg'){
+  #map {
+    height: calc(100vh - 90px);
+  }
+}

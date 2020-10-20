@@ -1,0 +1,30 @@
+@import "reset";
+@import "variables";
+@import "mixins/mixins";
+@import "fonts";
+@import "grids";
+
+@import "map";
+@import "header";
+@import "news-item";
+@import "news-list-item";
+@import "bridge-element";
+@import "bridge-information-element";
+@import "connection_information";
+@import "animation";
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: $background-color;
+  color: $subtitle-font-color;
+  font-family: flanders_art_sanslight, sans-serif;
+
+}
+
+
+.main-container{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

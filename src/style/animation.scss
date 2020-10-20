@@ -1,0 +1,42 @@
+.slide-down-enter-active {
+  transition-duration: 0.4s;
+}
+
+.slide-down-leave-active {
+  transition-duration: 0.4s;
+}
+
+.slide-down-enter-to, .slide-down-leave {
+  overflow: hidden;
+  opacity: 1;
+max-height: 900px;
+}
+
+.slide-down-enter, .slide-down-leave-to {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+
+
+
+
+.slide-right-enter-active {
+  transition-duration: 0.4s;
+}
+
+.slide-right-leave-active {
+  transition-duration: 0.4s;
+}
+
+.slide-right-enter-to, .slide-right-leave {
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+.slide-right-enter, .slide-right-leave-to {
+  transform: translateX(-100%)  ;
+ opacity: 0;
+}

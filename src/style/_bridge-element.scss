@@ -1,0 +1,72 @@
+.bridge-element-container {
+  width: 153px;
+
+  .utility-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .utility-item {
+      background-color: white;
+      color: $dark-blue;
+      flex-grow: 1;
+      min-width: 72px;
+      margin-bottom: 5px;
+      height: 30px;
+      border-radius: 2.64px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+
+      .state-container {
+        display: flex;
+      }
+
+      &:nth-child(even) {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .bridge-name {
+    position: relative;
+    background-color: $dark-blue;
+    text-align: center;
+    height: 40px;
+    border-radius: 2.64px;
+    font-size: 17px;
+    font-family: $flanders_art_sansmedium;
+    line-height: 40px;
+
+    &:after {
+      position: absolute;
+      bottom: -10px;
+      left: calc(153px / 2);
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $dark-blue;
+    }
+
+
+
+    &.active {
+      background-color: $light-blue;
+
+      &:after {
+        border-top: 10px solid $light-blue;
+      }
+    }
+  }
+}
+
+@include media('lg') {
+  .bridge-element-container {
+    width: 172px;
+
+    &:after {
+      left: calc(calc(172px / 2) - 5px);;
+    }
+  }
+}
