@@ -31,6 +31,7 @@
   border-radius: 10px;
   padding: 20px 20px;
   margin-bottom: 10px;
+
 }
 
 
@@ -38,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-
+  cursor: pointer;
   .name {
     font-family: $flanders_art_sansmedium;
     color: $title-font-color;
