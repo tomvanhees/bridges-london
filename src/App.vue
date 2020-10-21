@@ -68,8 +68,7 @@ export default Vue.extend({
   },
   methods: {
     initConnections() {
-      this.fetchConnections()
-          .then(() => {
+      this.fetchConnections().then(() => {
         this.addBridgesToMap();
       });
     },

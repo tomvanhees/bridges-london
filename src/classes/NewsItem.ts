@@ -53,7 +53,6 @@ export class NewsItem implements NewsItemInterface {
     return [day, dayOfMonth, month, year, hours, minutes];
   }
 
-
   get hasBeenUpdated(): boolean {
     return this.createdAt !== this.updatedAt;
   }
